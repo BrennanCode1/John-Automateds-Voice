@@ -14,13 +14,14 @@ while callN < 101 :
     #intislizing code to check if phone call answered
     #check the number is 1 on the first call
     if callN == 1:
-        print("1")
+        print("Playing Recording for voice 1")
         #do the automated voice
         #check if voice call automation is over
         #hang up phone call
         wave_obj = sa.WaveObject.from_wave_file("/Users/brennan1/Downloads/fuckoff.wav")
         play_obj = wave_obj.play()
         play_obj.wait_done() 
+        print("Recording over moving to caller 2")
     elif callN == 2:
         print("2")
         #do the automated voice
