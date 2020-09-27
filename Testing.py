@@ -1,11 +1,9 @@
 import os
 import time
-
+import pyautogui 
 
 callN=0 
-
-
-
+print(pyautogui.size()) 
 while callN < 101 :
     print ("Starting check")
     callN+=1
