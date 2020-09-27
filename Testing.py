@@ -1,11 +1,14 @@
 import os
 import time
 import pyautogui 
+import simpleaudio as sa
+import sounddevice as sd
+
 
 callN=0 
 print(pyautogui.size()) 
+
 while callN < 101 :
-    print ("Starting check")
     callN+=1
     #intiializeing code to answer phone call
     #intislizing code to check if phone call answered
@@ -15,8 +18,11 @@ while callN < 101 :
         #do the automated voice
         #check if voice call automation is over
         #hang up phone call
+        wave_obj = sa.WaveObject.from_wave_file("/Users/brennan1/Downloads/fuckoff.wav")
+        play_obj = wave_obj.play()
+        play_obj.wait_done() 
     elif callN == 2:
-        print("1")
+        print("2")
         #do the automated voice
         #check if voice call automaiton is over
         #hang up phone call
